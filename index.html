@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Better Todo List</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="main.js"></script>
+
+</head>
+<body>
+  <h1 class="title" >My Better Todo List</h1>
+  <div class="lists-container">
+    <h3 class="lists-title">My Lists</h3>
+    <ul class="all-lists" data-lists> 
+      <!-- <li class="list-name active" >Work</li>
+      <li class="list-name" >Programming</li>
+      <li class="list-name" >Living Life</li> -->
+    </ul>
+
+    <form class="list-form" action="" data-new-list-form >
+      <input 
+        type="text" 
+        class="input list" 
+        placeholder="New list name" 
+        aria-label="new-list-name" 
+        data-new-list-input
+      />
+      <button class="btn btn-list" aria-label="new-list-name">+</button>
+    </form>
+  </div>
+
+
+
+  <div class="todos-container" data-todos-container>
+    <div class="todos-header">
+      <h2 class="list-title" data-list-title></h2>
+      <p class="todos-count" data-todos-count></p>
+
+    </div>
+    <div class="todos-body">
+      <div class="todos" data-todos-body>
+        <template id="todo-template">
+          <div class="todo">
+            <input type="checkbox">
+            <label>
+              <span class="custom-checkbox"></span>
+            </label>
+          </div>
+        </template>
+      </div>
+      <form action="" class="todo-form" data-new-todo-form>
+        <input 
+          type="text"  
+          class="input input-todo" 
+          placeholder="New tasks name"
+          aria-label="new-todo-name"
+          data-new-todo-input 
+        />
+        <button class="btn btn-todo" aria-label="new-todo-name">+</button>
+      </form>
+      <div class="delete-buttons">
+        <button class="btn delete-todos" data-delete-completed-todos>Clear completed tasks</button>
+        <button class="btn delete-list" data-delete-list-btn>Delete List</button>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
